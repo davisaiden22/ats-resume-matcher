@@ -2,7 +2,7 @@ AI Resume & ATS Matcher
 
 Upload a resume (PDF), paste a job description, and get an ATS-style report: a match score, missing keywords and three actionable tips. Built with Python, Streamlit, pypdf and any OpenAI-compatible AI provider (Groq by default).
 
-Live demo: [add your Streamlit link here after deploying]
+Live demo: https://aiden-ats-resume-matcher.streamlit.app/
 
 Run it locally
 Install Python (tested on Python 3.15 on Windows; tick "Add Python to PATH") and VS Code.
