@@ -52,7 +52,7 @@ The score is an AI estimate, not a real ATS result, and it can vary slightly bet
 No automated tests yet.
 Privacy
 
-Resume text is sent to the AI provider you configure and is not stored by this app. Do not paste anything you would not want sent to that provider.
+Resume text is sent to the AI provider you configure and is not stored by this app. Do not paste anything you would not want sent to that provider. Please also realize that this is not to be followed as an absolute but rather as a guideline and following the AI's points of improvement could influence your score negatively or in a way you don't expect it to.
 
 What I would improve next
 Structured (JSON) output with a proper score display
@@ -60,5 +60,5 @@ Support for scanned PDFs (OCR)
 Rate limiting and basic tests
 Try to build independently as I'm learning how to code
 
-I built this with help from Claude and Gemini. I tested it, fixed the problems I found (a hard-coded token, wrong model names, invented requirements from short job descriptions) and can explain how each part works.
+
 
