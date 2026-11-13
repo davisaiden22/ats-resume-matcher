@@ -5,29 +5,30 @@ Upload a resume (PDF), paste a job description, and get an ATS-style report: a m
 Live demo: https://aiden-ats-resume-matcher.streamlit.app/
 
 Run it locally
-Install Python (tested on Python 3.15 on Windows; tick "Add Python to PATH") and VS Code.
-Open this folder in VS Code, then open the terminal (Terminal > New Terminal).
-Create and activate a virtual environment, then install the packages:
-py -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux (use python3 -m venv venv to create it)
-pip install -r requirements.txt
+- Install Python (tested on Python 3.15 on Windows; tick "Add Python to PATH") and VS Code.
+- Open this folder in VS Code, then open the terminal (Terminal > New Terminal).
+- Create and activate a virtual environment, then install the packages:
+- py -m venv venv
+- venv\Scripts\activate        # Windows
+- source venv/bin/activate     # Mac/Linux (use python3 -m venv venv to create it)
+- pip install -r requirements.txt
 
 If PowerShell blocks the activate script, run this once and try again:
 
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-Get a free API key from https://console.groq.com
-Create a folder called .streamlit, copy secrets.toml.example into it, rename the copy to secrets.toml, and paste your key in. (secrets.toml is in .gitignore, so it is never uploaded to GitHub.) It needs two lines:
-toml
+- Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+- Get a free API key from https://console.groq.com
+- Create a folder called .streamlit, copy secrets.toml.example into it, rename the copy to secrets.toml, and paste your key in. (secrets.toml is in .gitignore, so it is never uploaded to GitHub.)
+It needs two lines:
+
 LLM_API_KEY = "paste-your-key-here"
 LLM_MODELS = "openai/gpt-oss-120b,openai/gpt-oss-20b"
 
 LLM_BASE_URL is optional. It defaults to Groq.
 
 Start the app:
-streamlit run app.py
-Check which models your key can use
-python list_models.py
+- streamlit run app.py
+- Check which models your key can use
+- python list_models.py
 
 This lists the models your API key can access. I wrote it after getting a 404 from a model name that did not exist for my key.
 
