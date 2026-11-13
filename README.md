@@ -37,7 +37,7 @@ Any OpenAI-compatible provider should work. Change LLM_BASE_URL, LLM_MODELS and 
 
 Deploy
 
-Push to GitHub, create an app on Streamlit Community Cloud (main file app.py), and paste the two secrets above into the app's Secrets box. If you can choose a Python version in Advanced settings, pick 3.12 or 3.13.
+Push to GitHub, create an app on Streamlit Community Cloud (main file app.py), and paste the two secrets above into the app's Secrets box. If you can choose a Python version in Advanced settings, pick 3.12 or 3.13. I used 3.13 and it worked fine.
 
 How it works
 - Extract the text from the PDF with pypdf (text layer only, so no OCR).
@@ -46,19 +46,20 @@ How it works
 - Call the AI model. If a model is missing, too large for the request or rate limited, try the next one. Network and server errors are retried with growing delays.
 - Show the report.
  > Limitations
-Only text-based PDFs work. Scanned PDFs have no text layer, so the app stops with a message.
-A very short job description can make the model invent requirements. The app warns about this and the prompt tells the model not to invent any, but the warning is based on word count only.
-The score is an AI estimate, not a real ATS result, and it can vary slightly between runs.
-No automated tests yet.
+- Only text-based PDFs work. Scanned PDFs have no text layer, so the app stops with a message.
+- A very short job description can make the model invent requirements. The app warns about this and the prompt tells the model not to invent any, but the warning is based on word count only.
+- The score is an AI estimate, not a real ATS result, and it can vary slightly between runs.
+- No automated tests yet.
+
 Privacy
 
 Resume text is sent to the AI provider you configure and is not stored by this app. Do not paste anything you would not want sent to that provider. Please also realize that this isn't to be followed as an absolute but rather as a guideline and following the AI's points of improvement could influence your score negatively or in a way you don't expect it to.
 
 What I would improve next
-Structured (JSON) output with a proper score display
-Support for scanned PDFs (OCR)
-Rate limiting and basic tests
-Try to build independently as I'm learning how to code
+- Structured (JSON) output with a proper score display
+- Support for scanned PDFs (OCR)
+- Rate limiting and basic tests
+- Try to build independently as I'm learning how to code
 
 
 
