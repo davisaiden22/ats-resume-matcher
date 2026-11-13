@@ -1,6 +1,7 @@
 AI Resume & ATS Matcher
 
 Upload a resume (PDF), paste a job description, and get an ATS-style report: a match score, missing keywords and three actionable tips. Built with Python, Streamlit, pypdf and any OpenAI-compatible AI provider (Groq by default).
+AI-generated recommendations should be treated as guidance rather than guaranteed improvements. During testing, I found that implementing some recommendations could result in a lower match score. This highlights the importance of reviewing suggestions carefully and ensuring they genuinely improve the relevance of the CV.
 
 Live demo: https://aiden-ats-resume-matcher.streamlit.app/
 
@@ -19,7 +20,7 @@ If PowerShell blocks the activate script, run this once and try again:
 - Get a free API key from https://console.groq.com
 - Create a folder called .streamlit, copy secrets.toml.example into it, rename the copy to secrets.toml, and paste your key in. (secrets.toml is in .gitignore, so it is never uploaded to GitHub.)
 It needs two lines:
-
+toml
 LLM_API_KEY = "paste-your-key-here"
 LLM_MODELS = "openai/gpt-oss-120b,openai/gpt-oss-20b"
 
@@ -54,13 +55,13 @@ How it works
 
 Privacy
 
-Resume text is sent to the AI provider you configure and is not stored by this app. Do not paste anything you would not want sent to that provider. Please also realize that this isn't to be followed as an absolute but rather as a guideline and following the AI's points of improvement could influence your score negatively or in a way you don't expect it to.
+Resume text is sent to the AI provider you configure and is not stored by this app. Do not paste anything you would not want sent to that provider.
 
 What I would improve next
 - Structured (JSON) output with a proper score display
 - Support for scanned PDFs (OCR)
 - Rate limiting and basic tests
-- Try to build independently as I'm learning how to code
+- Continue strengthening my Python skills and develop more of the application independently as I build on my programming knowledge.
 
 
 
