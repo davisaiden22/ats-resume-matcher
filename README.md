@@ -20,6 +20,7 @@ If PowerShell blocks the activate script, run this once and try again:
 - Get a free API key from https://console.groq.com
 - Create a folder called .streamlit, copy secrets.toml.example into it, rename the copy to secrets.toml, and paste your key in. (secrets.toml is in .gitignore, so it is never uploaded to GitHub.)
 It needs two lines:
+
 toml
 LLM_API_KEY = "paste-your-key-here"
 LLM_MODELS = "openai/gpt-oss-120b,openai/gpt-oss-20b"
